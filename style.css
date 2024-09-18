@@ -1,0 +1,166 @@
+/* 
+padding - abstand nach innen
+margin - abstand nach außen
+box-sizing - box größen berechung
+font-family - schriftart
+line-height - zeilenabstand
+text-align - textausrichtung
+list-style-type - aufzählungsart
+justify-content - inhalt ausrichten nach
+flex-direction - flex richtung
+border-radius - ecken abrunden
+hover - maus hover effect
+display: inline - in reihe anzeige
+Flex-Wrap - responsive Design 
+
+*/ 
+
+/* grundform */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Baskerville', serif;
+}
+
+/* navigator */
+nav ul li a:hover {
+    background-color: #3B3030; 
+}
+
+/* body */
+body {
+    background-color: white;
+    color: #3B3030;
+    line-height: 1.6;
+}
+
+/* header */
+header {
+    background-color: #664343;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* html klassen */
+header h1 {
+    margin: 0;
+}
+
+h2 {
+    color: #664343;
+}
+
+nav ul {
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+/* main */
+main {
+    padding: 20px;
+}
+
+/* main info */
+mainInfo {
+    text-align: center;
+}
+
+/* Fotos */
+.gallery {
+    display: flex;
+    
+    flex-wrap: wrap; 
+}
+
+.gallery img {
+    width: 24.5%;
+    margin-right: 5px;
+    margin-bottom: 5px; 
+    justify-content: space-between;
+}
+
+.gallery img:last-child {
+    margin-right: 0;
+}
+
+/* feedback */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #795757;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #664343;
+}
+
+/* footer */
+footer {
+    background-color: #3B3030;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* responsive design */
+/* Für Tablets und kleinere Geräte */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0; /* Navigation untereinander */
+    }
+
+    .gallery img {
+        width: 48%;
+        margin-bottom: 10px; /* Zwei Bilder pro Reihe */
+    }
+}
+
+/* Für Smartphones */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    .gallery img {
+        width: 100%; /* Ein Bild pro Reihe */
+        margin-bottom: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Kleinere Abstände für mobile Navigation */
+    }
+
+    form input, form textarea {
+        width: 100%;
+    }
+
+    iframe {
+        width: 100%;
+        height: 200px; /* Google Maps Iframe an Bildschirmgröße angepasst */
+    }
+}
